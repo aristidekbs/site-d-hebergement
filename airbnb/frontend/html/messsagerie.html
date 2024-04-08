@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>messagerie</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-test.css">
+</head>
+<body>
+
+    <header>
+        <section>
+            <div class="logo">
+                <h3>AIR <span id="nuit_color">BNB</span> </h3>
+            </div>
+            
+        </section>
+
+        <menu>
+            <nav>
+                <ul>
+                    <li><a href="./reservation.html">RESERVATION</a></li>
+                    
+                </ul>
+            </nav>
+        </menu>
+
+        <section class="auth">
+            <button class="signup"><a href="./inscripton.html">Inscription</a></button>
+            <button class="login"><a href="./connexion.html">Connexion</a></button>
+        </section>
+    </header>
+        <div class="container">
+            <div class="form-container">
+                <h2>Envoyer un message aux gérants :</h2>
+                <form id="sendMessageForm">
+                    <input type="text" id="clientName" name="clientName" required placeholder="Nom du client">
+                    <textarea name="message" id="message" cols="5" rows="5" placeholder="Message" required></textarea>
+                    <button type="button" onclick="sendMessage()">Envoyer</button>
+                </form>
+            </div>
+        </div>
+        <table id="messageTable">
+            <caption>Cliquer pour <a href="#" onclick="displayMessages()">afficher</a></caption>
+            <thead>
+                <th>Message</th>
+                <th>Date Message</th>
+            </thead>
+            <tbody id="messageBody"></tbody>
+        </table>
+
+    <script src="../javascript/messagerie-client.js"></script>
+</body>
+</html>
